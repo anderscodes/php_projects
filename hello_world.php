@@ -1,3 +1,5 @@
+<?php
+
 class Model {
   public $text;
 
@@ -32,3 +34,5 @@ $model = new Model();
 $controller = new Controller($model);
 $view = new View($model);
 echo $view->output();
+
+?>
