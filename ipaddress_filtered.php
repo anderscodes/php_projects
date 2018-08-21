@@ -15,11 +15,21 @@ function forwarded_ip() {
        $ip_array = explode(',', $_SERVER[$key]);
        foreach($ip_array as $ip) {
          $ip = trim($ip);
-         return $ip;
+         if(validate_ip($ip)) {
+           return $ip;
+         }
        }
      }
    }
    return '';
+}
+
+function validate_ip($ip) {
+  if(filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4 | FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE) === false) {
+    return false;
+  } else {
+    return true;
+  }
 }
 
 $remote_ip = $_SERVER['REMOTE_ADDR'];
