@@ -22,6 +22,17 @@ function forwarded_ip() {
    return 'None';
 }
 
-echo forwarded_ip();
+$remote_ip = $_SERVER['REMOTE_ADDR'];
+$forwarded_ip = forwarded_ip();
 
 ?>
+
+Remote IP Address: <?php echo $remote_ip; ?>
+<br />
+<br />
+
+<?php if($forwarded_ip != '') { ?>
+  Forwarded For: <?php echo $forwarded_ip; ?>
+  <br />
+  <br />
+<?php } ?>
