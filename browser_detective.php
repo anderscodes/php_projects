@@ -34,7 +34,7 @@ class BrowserDetective {
       $this->platform = 'Linux';
     } elseif (preg_match('/macintosh|mac os/i', $this->user_agent)) {
       $this->platform = 'Mac';
-    } elseif (preg_match('/windows|win32/i', $this->user_agent)) {
+    } else (preg_match('/windows|win32/i', $this->user_agent)) {
       $this->platform = 'Windows';
     }
   }
@@ -50,8 +50,9 @@ class BrowserDetective {
       $this->browser_name = 'Safari';
     } elseif (preg_match('/Opera/i', $this->user_agent)) {
       $this->browser_name = 'Opera';
-    } elseif (preg_match('/Netscape/i', $this->user_agent)) {
+    } else (preg_match('/Netscape/i', $this->user_agent)) {
       $this->browser_name = 'Netscape';
+    }
   }
 }
 
