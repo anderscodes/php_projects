@@ -7,12 +7,12 @@
     body{
       margin: 0;
       padding: 0;
-      background: #DFCC89;
+      background: #f1ddfd;
     }
     #main-content {
       margin: 30px;
       text-align: center;
-      color: #3D2399;
+      color: #05464f;
     }
     #main-content h1{
       font: 40px Arial, Helvetica, sans-serif;
