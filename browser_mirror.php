@@ -19,6 +19,7 @@
     }
     #main-content p {
       font: 24px "Times New Roman", Times, Georgia, serif;
+      text-align: left;
     }
     #main-content p strong {
       font-size 70px;
@@ -41,7 +42,7 @@
         <p>HTTP Accept Charset: <?php echo $_SERVER['HTTP_ACCEPT_CHARSET']; ?></p>
         <p>HTTP Accept Encoding: <?php echo $_SERVER['HTTP_ACCEPT_ENCODING']; ?></p>
         <p>HTTP Accept Language: <?php echo $_SERVER['HTTP_ACCEPT_LANGUAGE']; ?></p>
-        <p>HTTPS?: <?php echo $_SERVER['HTTPS']; ?></p>
+        <p>HTTPS?: <?php if(isset($_SERVER['HTTPS'])) {echo 'YES';} else {echo 'No';} ?></p>
         <p>Remote Port: <?php echo $_SERVER['REMOTE_PORT']; ?></p>
 
     </div>
